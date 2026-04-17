@@ -256,6 +256,91 @@ def fetch_candles(fyers, symbol, interval, date_str=None):
 # ─────────────────────────────────────────────
 # PAGE CONFIG
 # ─────────────────────────────────────────────
+def load_css():
+    st.markdown("""
+    <style>
+
+    :root {
+        --bg: #0a0a0a;
+        --bg2: #111111;
+        --sidebar: #0d0d0d;
+        --card: #161616;
+        --card2: #1c1c1c;
+        --card-bdr: #2a2a2a;
+        --text: #e8e0d0;
+        --text2: #a89880;
+        --text3: #5a5248;
+        --ce: #ff6633;
+        --pe: #00cc66;
+        --diff: #ffaa00;
+        --blue: #3399ff;
+        --purple: #9966ff;
+        --divider: #222222;
+        --orange: #ff6600;
+        --yellow: #ffcc00;
+    }
+
+    html, body {
+        background: var(--bg) !important;
+    }
+
+    .stApp {
+        background: var(--bg) !important;
+        color: var(--text) !important;
+    }
+
+    /* Kill streamlit chrome */
+    header[data-testid="stHeader"] { display: none !important; }
+    div[data-testid="stDecoration"] { display: none !important; }
+    button[data-testid="collapsedControl"] { display: none !important; }
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background: var(--sidebar) !important;
+        border-right: 1px solid #1a1a1a !important;
+        min-width: 380px !important;
+        max-width: 380px !important;
+    }
+
+    /* Buttons — FIXED COMMENT */
+    .stButton > button[kind="primary"],
+    .stButton > button[data-testid="baseButton-primary"] {
+        background: var(--orange) !important;
+        color: #000 !important;
+        border: none !important;
+        border-radius: 2px !important;
+        font-weight: 700 !important;
+        font-size: 11px !important;
+        letter-spacing: 1.5px !important;
+        text-transform: uppercase !important;
+    }
+
+    .stButton > button[kind="primary"]:hover {
+        background: #cc5200 !important;
+    }
+
+    /* Inputs */
+    .stTextInput input,
+    .stNumberInput input,
+    .stSelectbox div[data-baseweb="select"] > div {
+        background: var(--card) !important;
+        border-color: #2c2c2c !important;
+        color: var(--text) !important;
+        font-size: 12px !important;
+    }
+
+    /* Tabs */
+    .stTabs [data-baseweb="tab"] {
+        color: var(--text3) !important;
+    }
+
+    .stTabs [aria-selected="true"] {
+        color: var(--orange) !important;
+        border-bottom: 2px solid var(--orange) !important;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
 
 st.set_page_config(
     page_title="NFO/BFO Spread Terminal",
