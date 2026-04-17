@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────
+# .gitignore — NFO/BFO Spread Terminal
+# ─────────────────────────────────────────────
+
+# !! SECRETS — never commit these !!
+.streamlit/secrets.toml
+access_token.txt
+*.env
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+fyers_logs/
+logs/
+
+# Streamlit cache (safe to delete, auto-regenerates)
+.streamlit/cache/
