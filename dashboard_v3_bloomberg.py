@@ -747,6 +747,8 @@ div[data-testid="stMainBlockContainer"] > div > div > div:nth-child(1) button {{
 </style>
 """, unsafe_allow_html=True)
 
+load_css()
+
 # ─────────────────────────────────────────────
 # DATE LOGIC
 # ─────────────────────────────────────────────
